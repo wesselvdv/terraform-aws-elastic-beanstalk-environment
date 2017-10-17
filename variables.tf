@@ -66,6 +66,11 @@ variable "private_subnets" {
   type = "list"
 }
 
+variable "associate_public_ip_address" {
+  description = "Specifies whether to launch instances in your VPC with public IP addresses. Instances with public IP addresses do not require a NAT device to communicate with the Internet, but must be on a public subnet."
+  default = "false"
+}
+
 variable "keypair" {}
 
 variable "updating_min_in_service" {
