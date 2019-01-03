@@ -713,6 +713,11 @@ resource "aws_elastic_beanstalk_environment" "default" {
     value     = "${var.instance_refresh_enabled}"
   }
   setting {
+    namespace = "aws:elasticbeanstalk:environment:proxy"
+    name      = "ProxyServer"
+    value     = "${var.proxy_server}"
+  }
+  setting {
     namespace = "aws:elasticbeanstalk:container:nodejs"
     name      = "NodeVersion"
     value     = "${var.nodejs_version}"

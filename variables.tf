@@ -356,6 +356,11 @@ variable "nodejs_version" {
   description = "Elastic Beanstalk NodeJS version to deploy"
 }
 
+variable "proxy_server" {
+  default     = "nginx"
+  description = "Specifies the web server to use as a proxy"
+}
+
 variable "force_destroy" {
   default     = false
   description = "Destroy S3 bucket for load balancer logs"
